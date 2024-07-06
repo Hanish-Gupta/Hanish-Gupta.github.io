@@ -3,20 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Website</title>
+    <title>Hanish Gupta - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Welcome to My Simple Website</h1>
+        <h1>Hanish Gupta</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showTab('skills')">Skills</a></li>
+                <li><a href="#" onclick="showTab('experience')">Work Experience</a></li>
+                <li><a href="#" onclick="showTab('personal-info')">Personal Information</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <p>This is a simple website with a button that changes color when clicked.</p>
-        <button id="colorButton">Click Me!</button>
+        <section id="skills" class="tab-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>JavaScript</li>
+                <li>HTML & CSS</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Git</li>
+            </ul>
+        </section>
+        <section id="experience" class="tab-content">
+            <h2>Work Experience</h2>
+            <p>Software Developer with 2 years of experience in web development and software engineering.</p>
+        </section>
+        <section id="personal-info" class="tab-content">
+            <h2>Personal Information</h2>
+            <p><strong>Name:</strong> Hanish Gupta</p>
+            <p><strong>Age:</strong> 23</p>
+            <p><strong>Email:</strong> hanishgupta141@gmail.com</p>
+            <p><strong>Address:</strong> Toronto, ON</p>
+        </section>
     </main>
-    <footer>
-        <p>&copy; 2024 My Simple Website</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>

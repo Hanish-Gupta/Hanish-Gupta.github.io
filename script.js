@@ -1,16 +1,16 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    const button = document.getElementById('colorButton');
+function showTab(tabId) {
+    // Hide all tab content
+    const tabs = document.querySelectorAll('.tab-content');
+    tabs.forEach(tab => tab.classList.remove('active'));
 
-    button.addEventListener('click', () => {
-        button.style.backgroundColor = getRandomColor();
-    });
-
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
+    // Show the selected tab content
+    const selectedTab = document.getElementById(tabId);
+    if (selectedTab) {
+        selectedTab.classList.add('active');
     }
+}
+
+// Show the skills tab by default
+document.addEventListener('DOMContentLoaded', () => {
+    showTab('skills');
 });
